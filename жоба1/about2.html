@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Біз Туралы - Автокөлік Жалдау Жүйесі</title>
+    <link rel="icon" href="сурет/logo.jpg" type="png">
+    <!-- ---------------------меню контейнері басталуы------------------------ --> 
+    <nav class="main-menu">
+        <div class="menu-container"> 
+            
+            <div class="logo">
+                <h1>🚗AutoProkat</h1>
+            </div>
+            <ul class="menu-items">
+                <li><a href="home2.html">Басты бет</a></li>
+                <li class="dropdown">
+                    <a href="cars2.html">Көліктер </a></li>
+                <li><a href="about2.html">Біз туралы</a></li>
+                <li><a href="маш/Премиум Автопарк.html">Премиум Автопарк</a></li>
+            </ul>
+        </div>
+    </nav>
+    <style>
+        .main-menu {
+            background-color: #2c3e50;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+    
+        .menu-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 24px;
+        }
+    
+        .menu-items {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .menu-items li {
+            margin: 0 15px;
+            position: relative;
+        }
+    
+        .menu-items a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+    
+        .menu-items a:hover {
+            color: #3498db;
+        }
+    
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #34495e;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border-radius: 4px;
+        }
+    
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+    
+        .dropdown-content a:hover {
+            background-color: #2c3e50;
+        }
+    
+        @media (max-width: 768px) {
+            .menu-container {
+                flex-direction: column;
+                text-align: center;
+            }
+    
+            .menu-items {
+                flex-direction: column;
+                margin-top: 15px;
+            }
+    
+            .menu-items li {
+                margin: 10px 0;
+            }
+    
+            .dropdown-content {
+                position: static;
+                background-color: transparent;
+                box-shadow: none;
+            }
+        }
+    </style>
+    <!-- ---------------------меню контейнері бітуі------------------------ --> 
+
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        .about-hero {
+        position: relative;
+        text-align: center;
+        color: white;
+        padding: 150px 20px 90px; /* үсті 160px, асты 100px */
+      }
+        .about-hero::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: url('https://wp-s.ru/wallpapers/0/95/425874647311118/superskoe-gonochnyj-avtomobil-stilnoe-avto.jpg') center/cover;
+          z-index: -2;
+        }
+        .about-hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Жартылай қараңғы қабат */
+        z-index: -1;
+      }
+        .about-content {
+          display: flex;
+          justify-content: space-around;
+          text-align: center;
+          padding: 20px;
+        }
+        .about-card {
+          width: 30%;
+          background: #f4f4f4;
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          position: relative;
+          transition: transform 0.3s ease-in-out;
+        }
+        .about-card:hover {
+          transform: scale(1.1);
+        }
+        .about-card img {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+        .team-grid {
+          display: flex;
+          justify-content: center;
+          gap: 150px
+        }
+        .team-member {
+          text-align: center;
+          margin: 15px;
+        }
+        .team-member img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        .contact-container {
+          display: flex;
+          justify-content: center;
+          padding: 20px;
+        }
+        .contact-info {
+          width: 45%;
+        }
+        .contact-map {
+          width: 20%;
+        }
+        .main-footer {
+          background: #2c3e50;
+          color: white;
+          text-align: center;
+          padding: 10px;
+        }
+        .footer-content {
+          display: flex;
+          justify-content: space-between;
+        }
+        
+        .team-section h2 {
+          text-align: center;
+          font-size: 2em;
+          font-weight: bold;
+          margin-top: 20px;
+        }
+       
+
+      </style>
+  </head>
+  <body>
+    <main class="about-page">
+      <div class="about-hero">
+        <h1>Біздің Автокөлік Жалдау Қызметі Туралы</h1>
+        <p>Сіздің 2025 жылдан бастап премиум автокөлік жалдау бойынша сенімді серіктесіңіз</p>
+      </div>
+      <section class="about-content">
+        <div class="about-card">
+          <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800" alt="Premium Fleet" />
+          <h2>Премиум Паркі</h2>
+          <p>Біздің кең таңдауымыздан кез-келгені үшін жақсы күтімді көліктерді таңдаңыз оқиға.</p>
+        </div>
+        <div class="about-card">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800" alt="24/7 Support" />
+          <h2>24/7 Қолдау</h2>
+          <p>Біздің клиенттерге қызмет көрсету тобы әрқашан сізге көмектесуге дайын.</p>
+        </div>
+        <div class="about-card">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800" alt="Safe & Reliable" />
+          <h2>Қауіпсіз Және Сенімді</h2>
+          <p>Біздің барлық көліктеріміз тұрақты техникалық қызмет көрсету тексерулерінен өтеді.</p>
+        </div>
+      </section>
+      <section class="team-section">
+        <h2>Біздің Командамен Танысыңыз</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="C:\Users\user\Desktop\жоба1\автор\ers.jpeg" alt="Abibulla Ersultan" />
+            <h3>Abibulla Ersultan</h3>
+            <p>Web developer</p>
+          </div>
+          <div class="team-member">
+            <img src="C:\Users\user\Desktop\жоба1\автор\ulbosyn.jpg" alt="Rysbai Ulbosyn" />
+            <h3>Rysbai Ulbosyn</h3>
+            <p>Web designer</p>
+          </div>
+        </div>
+      </section>
+      <section class="contact-section">
+        <div class="contact-container">
+          <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p><strong>Address:</strong> Shymkent, Kazakhstan</p>
+            <p><strong>Phone:</strong> +77758060585</p>
+            <p><strong>Email:</strong> yersultan1508@okmpu.kz</p>
+          </div>
+          <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94368.90891797007!2d69.507404297844!3d42.34191778805103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a8f256546681bb%3A0xa167b582e75b369b!2z0KjRi9C80LrQtdC90YI!5e0!3m2!1sru!2skz!4v1743276677261!5m2!1sru!2skz" width="300" height="200" style="border:0;" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div>
+          <h3>Avtobrand_1</h3>
+          <p>Автокөлік жалдау бойынша сіздің сенімді серіктесіңіз</p>
+        </div>
+        <div>
+          <h3>Жылдам Сілтемелер</h3>
+          <ul>
+            <li><a href="#" style="color: white;">Басты бет</a></li>
+            <li><a href="#" style="color: white;">Көліктер</a></li>
+            <li><a href="#" style="color: white;">Біз туралы</a></li>
+          </ul>
+        </div>
+      </div>
+      <p>&copy; 2025 Автокөлік Жалдау Жүйесі. Барлық құқықтар қорғалған.</p>
+    </footer>
+  </body>
+</html>
