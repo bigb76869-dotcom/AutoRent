@@ -1,0 +1,110 @@
+/* меню контейнері басталуы*/
+<nav class="main-menu">
+    <div class="menu-container"> 
+        
+        <div class="logo">
+            <h1>🚗AutoProkat</h1>
+        </div>
+        <ul class="menu-items">
+            <li><a href="home2.html">Басты бет</a></li>
+            <li class="dropdown">
+                <a href="cars2.html">Көліктер </a></li>
+            <li><a href="about2.html">Біз туралы</a></li>
+            <li><a href="маш/Премиум Автопарк.html">Премиум Автопарк</a></li>
+        </ul>
+    </div>
+</nav>
+<style>
+    .main-menu {
+        background-color: #2c3e50;
+        padding: 15px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .menu-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo h1 {
+        color: #fff;
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .menu-items {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-items li {
+        margin: 0 15px;
+        position: relative;
+    }
+
+    .menu-items a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 10px;
+        transition: color 0.3s;
+    }
+
+    .menu-items a:hover {
+        color: #3498db;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #34495e;
+        min-width: 200px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        border-radius: 4px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        color: #fff;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #2c3e50;
+    }
+
+    @media (max-width: 768px) {
+        .menu-container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .menu-items {
+            flex-direction: column;
+            margin-top: 15px;
+        }
+
+        .menu-items li {
+            margin: 10px 0;
+        }
+
+        .dropdown-content {
+            position: static;
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+</style>
+/* меню контейнері бітуі*/
