@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Avtobrand_1 - Car Rentals in Kazakhstan</title>
+  <link rel="icon" href="сурет/logo.jpg" type="png">
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        font-family: sans-serif;
+        background: #f2f2f2;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        padding-top: 80px;
+    }
+
+    .main-menu {
+        background-color: #2c3e50;
+        padding: 15px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .menu-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo h1 {
+        color: #fff;
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .menu-items {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-items li {
+        margin: 0 15px;
+        position: relative;
+    }
+
+    .menu-items a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 10px;
+        transition: color 0.3s;
+    }
+
+    .menu-items a:hover {
+        color: #3498db;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #34495e;
+        min-width: 200px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        border-radius: 4px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        color: #fff;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #2c3e50;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        padding: 40px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background-color: #fff;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    header h1 {
+        color: #d84315;
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        color: #4e342e;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .formats-section {
+        max-width: 1000px;
+        margin: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .formats-section h2 {
+        font-size: 32px;
+        color: #2b3b4e;
+        margin-bottom: 10px;
+    }
+
+    .formats-section p.description {
+        font-size: 18px;
+        color: #444;
+        margin-bottom: 40px;
+    }
+
+    .formats-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px; /* арақашықтық үлкейді */
+        margin-bottom: 40px;
+    }
+
+    .format-box {
+        width: 260px;
+        border: 2px solid #2b3b4e;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #f7f9fc;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 20px;
+    }
+
+    .format-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(43, 59, 78, 0.2);
+    }
+
+    .format-box h3 {
+        color: #2b3b4e;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .format-box p {
+        color: #000;
+        font-size: 15px;
+    }
+
+    .hero {
+        background: url('сурет/шымкент.jpg') no-repeat center center/cover;
+        max-width: 1000px;
+        height: 400px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 400px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+        margin-bottom: 15px;
+        color: white;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        color: #f2f2f2;
+        margin-bottom: 25px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+    }
+
+    .btn.whatsapp {
+        background-color: #25D366;
+    }
+
+    .btn.call {
+        background-color: #FFA500;
+    }
+
+    .btn:hover {
+        opacity: 0.85;
+    }
+
+    footer {
+        width: 100%;
+        max-width: 1200px;
+        text-align: center;
+        background: #2c3e50;
+        color: white;
+        border-radius: 15px;
+        padding: 20px;
+        margin-top: auto;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 768px) {
+        .menu-container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .menu-items {
+            flex-direction: column;
+            margin-top: 15px;
+        }
+
+        .menu-items li {
+            margin: 10px 0;
+        }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Навигация -->
+  <nav class="main-menu">
+    <div class="menu-container">
+        <div class="logo">
+            <h1>🚗AutoProkat</h1>
+        </div>
+        <ul class="menu-items">
+            <li><a href="home2.html">Басты бет</a></li>
+            <li class="dropdown"><a href="cars2.html">Көліктер</a></li>
+            <li><a href="about2.html">Біз туралы</a></li>
+            <li><a href="маш/Премиум Автопарк.html">Премиум Автопарк</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <!-- Контейнер -->
+  <div class="container">
+    <header>
+      <h1>Қош келдіңіз!</h1>
+      <p>Қазақстандағы сенімді автокөлік жалдау қызметі</p>
+    </header>
+
+    <!-- Қызмет форматы -->
+    <div class="formats-section">
+      <h2>Қызмет Форматтары</h2>
+      <p class="description">Көлік жалдаудың әртүрлі форматтарын ұсынамыз — кез келген жағдайға ыңғайлы шешім бар!</p>
+
+      <div class="formats-container">
+          <div class="format-box">
+              <h3>Тәуліктік жалдау</h3>
+              <p>Бірнеше мекенге баруға қажет болған жағдайда ыңғайлы. Қаладан келген қонақтарға мінсіз шешім.</p>
+          </div>
+
+          <div class="format-box">
+              <h3>Сағаттық жалдау</h3>
+              <p>Мерекелік шараларға бару үшін жүргізушімен бірге жалға алуға болады.</p>
+          </div>
+
+          <div class="format-box">
+              <h3>Әуежай трансфері</h3>
+              <p>Қонақтарыңызды немесе серіктестеріңізді сәнді көлікпен қарсы алыңыз.</p>
+          </div>
+      </div>
+    </div>
+
+    <!-- Батыр бөлім -->
+    <div class="hero">
+      <div class="hero-content">
+          <h1>Шымкентте<br>көлік жалдау</h1>
+          <p>Шымкентте жүргізушімен және жүргізушісіз<br>сағаттық және тәуліктік көлік жалдау</p>
+          <div class="buttons">
+              <a href="https://wa.me/77001234567" class="btn whatsapp">WhatsApp</a>
+              <a href="tel:+77472264756" class="btn call">Қоңырау шалу</a>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Барлық құқықтар сақталған</p>
+  </footer>
+
+</body>
+</html>
